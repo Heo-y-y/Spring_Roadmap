@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 정보 테이블</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #ddd;
+    }
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .action-buttons button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .action-buttons button:hover {
+      background-color: #0056b3;
+    }
+    .filter-container {
+      display: flex;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+    .filter-container input, .filter-container select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .filter-container button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .filter-container button:hover {
+      background-color: #0056b3;
+    }
+    .search-container{
+        display: flex;
+        justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+<form th:action>
+  <div class="search-container">
+    <div class="filter-container">
+      <input type="text" name="name" placeholder="이름">
+      <select>
+        <option value="">레벨 선택</option>
+        <option value="1">레벨 1</option>
+        <option value="2">레벨 2</option>
+        <option value="3">레벨 3</option>
+      </select>
+
+    </div>
+
+    <div class="action-buttons">
+      <button type="submit">검색</button>
+      <button onclick="register()">회원 추가</button>
+    </div>
+  </div>
+</form>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>이름</th>
+    <th>이메일</th>
+    <th>가입일자</th>
+    <th>레벨</th>
+    <th>카드 갯수</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><a href="회원조회화면주소">[이름]</a></td>
+    <td>[이메일]</td>
+    <td>[가입일자]</td>
+    <td>[레벨]</td>
+    <td>[카드 갯수]</td>
+  </tr>
+  <!-- 여기에 추가적인 행을 필요한 만큼 추가하세요 -->
+</table>
+
+<script>
+  function search() {
+    // 검색 버튼 클릭 시 동작할 코드
+    alert('검색 기능은 준비 중입니다.');
+  }
+
+  function register() {
+    // 회원 추가 버튼 클릭 시 동작할 코드
+    alert('회원 추가 기능은 준비 중입니다.');
+  }
+</script>
+
+</body>
+</html>
